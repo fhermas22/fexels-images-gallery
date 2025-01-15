@@ -146,6 +146,11 @@ input, button, i {
     background: #8a6cff;
 }
 
+.gallery .load-more.disabled {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
 
 /*====== LightBox Image Preview ======*/
 .lightbox {
