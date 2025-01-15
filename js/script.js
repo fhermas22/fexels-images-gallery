@@ -8,6 +8,15 @@ const perPage = 15;
 let currentPage = 1;
 let searchTerm = null;
 
+const downloadImg = (imgURL) => {
+    fetch(imgURL).then(res => res.blob()).then(file => {
+        const a = document.createElement("a");
+        a.href = URL.createObjectURL(file);
+        a.download = new Date().getTime();
+        a.click();
+    }).catch(() => alert("Impossible de télécharger l'image !"));
+}
+
 const generateHTML = (images) => {
     // Making li of all fetched images and adding them to the existing image wrapper
     imagesWrapper.innerHTML += images.map(img => 
@@ -18,7 +27,9 @@ const generateHTML = (images) => {
                         <i class="fas fa-camera"></i>
                         <span>${img.photographer}</span>
                     </div>
-                    <button><i class="fas fa-download"></i></button>
+                    <button onclick="downloadImg('${img.src.large2x}')">
+                        <i class="fas fa-download"></i>
+                    </button>
                 </div>
             </li>`
     ).join("");
