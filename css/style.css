@@ -143,7 +143,7 @@ input, button, i {
     cursor: pointer;
     font-size: 1.2rem;
     padding: 12px 27px;
-    background: #8a6cff;
+    background: #6a5cff;
 }
 
 .gallery .load-more.disabled {
@@ -203,7 +203,7 @@ header .buttons i {
     cursor: pointer;
     text-align: center;
     line-height: 40px;
-    background: #8a6cff;
+    background: #6a5cff;
     font-size: 1.2rem;
     display: inline-block;
 }
