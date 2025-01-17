@@ -18,7 +18,7 @@ input, button, i {
 
 /*====== Search section ======*/
 .search {
-    height: 50vh;
+    height: 55vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,6 +47,7 @@ input, button, i {
 .search p {
     font-size: 1.5rem;
     font-weight: 8px;
+    margin-top: 20px;
 }
 
 .search .search-box {
@@ -71,6 +72,15 @@ input, button, i {
     padding-left: 55px;
 }
 
+#logo {
+    background-color: #6a5cff;
+    color: white;
+    padding: 8px;
+    border: 2px #390a55 dotted;
+    border-radius: 15px;
+    -webkit-text-stroke: 0.01rem black;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
 
 /*====== Gallery section ======*/
 .gallery {
@@ -228,4 +238,68 @@ header .buttons i {
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+
+/*=======Media query max-width 768px=======*/
+@media screen and (max-width: 768px) {
+    /*====== LightBox Image Preview ======*/
+    .lightbox .wrapper {
+        width: 95%;
+    }
+}
+
+/*=======Media query max-width 425px=======*/
+@media screen and (max-width: 425px) {
+    /*====== Search section ======*/
+    .search {
+        height: 85vh;
+    }
+
+    .search h1 {
+        font-size: 2.30rem;
+    }
+    
+    .search p {
+        font-size: 1.3rem;
+    }
+
+    .search-box input {
+        width: 95%;
+        font-size: 1rem;
+    }
+
+    /*====== Gallery section ======*/
+    .gallery .images {
+        columns: 5 150px;
+    }
+}
+
+/*=======Media query max-width 320px=======*/
+@media screen and (max-width: 320px) {
+    /*====== Search section ======*/
+    .search h1 {
+        font-size: 2.20rem;
+    }
+    
+    .search p {
+        font-size: 1.2rem;
+    }
+
+    /*====== Gallery section ======*/
+    .gallery .images {
+        columns: 5 100px;
+    }
+
+    /*====== LightBox Image Preview ======*/
+    header .photographer i {
+        font-size: 1.5rem;
+    }
+    
+    header .photographer span {
+        font-size: 0.8rem;
+    }
+
+    header .buttons i {
+        font-size: 1rem;
+    }
 }
